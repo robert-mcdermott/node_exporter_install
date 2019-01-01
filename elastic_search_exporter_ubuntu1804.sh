@@ -25,7 +25,7 @@ After=network-online.target
 User=node_exporter
 Group=node_exporter
 Type=simple
-ExecStart=/opt/node_exporter/elasticsearch_exporter
+ExecStart=/opt/node_exporter/elasticsearch_exporter -es.uri=http://localhost:9200 -es.indices true -es.shards true
 
 [Install]
 WantedBy=multi-user.target
